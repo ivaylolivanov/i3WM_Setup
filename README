@@ -1,0 +1,9 @@
+<h2>Everything used to setup custom i3WM setup</h2>
+<h4>Dependences:</h4>
+<ul>
+<li>i3wm</li>
+<li>i3status</li>
+<li>i3lock</li>
+<li>physlock</li>
+<li>xautolock<li>
+</ul>
