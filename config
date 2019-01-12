@@ -159,6 +159,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#+=====================+
+#|   Custom settings   |
+#+=====================+
+
+# Activate i3lock after 25 minutes of inactivity
+exec xautolock -time 25 -locker '/home/ivo/.config/i3/i3_lock_tty.sh' &
+
 # Custom keybinds
 # Screen lock
 bindsym Control+Mod1+l exec --no-startup-id /home/ivo/.config/i3/i3_lock_tty.sh
