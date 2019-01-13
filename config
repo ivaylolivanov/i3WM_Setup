@@ -165,6 +165,7 @@ bindsym $mod+r mode "resize"
 
 # Activate i3lock after 25 minutes of inactivity
 exec xautolock -time 25 -locker '/home/ivo/.config/i3/i3_lock_tty.sh' &
+exec xautolock -time 30 -locker "systemctl suspend" &
 
 # Custom keybinds
 # Screen lock
