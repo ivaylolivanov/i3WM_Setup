@@ -17,7 +17,7 @@ font pango:inconsolata 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -112,9 +112,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-# Switch between different keyboard layouts
-exec --no-startup-id setxkbmap -model pc104 -layout us,bg,de -variant ,bas_phonetic, -option grp:alt_shift_toggle,grp_led:scroll
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -168,8 +165,11 @@ exec xautolock -time 25 -locker '/home/ivo/.config/i3/i3_lock_tty.sh' &
 exec xautolock -time 30 -locker "systemctl suspend" &
 
 # Custom keybinds
+# Switch between different keyboard layouts
+exec --no-startup-id setxkbmap -model pc104 -layout us,bg,de -variant ,bas_phonetic, -option grp:alt_shift_toggle,grp_led:scroll
+
 # Screen lock
-bindsym Control+Mod1+l exec --no-startup-id /home/ivo/.config/i3/i3_lock_tty.sh
+bindsym Control+Mod1+l exec --no-startup-id /home/sleepyme/.config/i3/i3_lock_tty.sh
 
 # Pulse Audio controls
 # Increase Volume
@@ -183,11 +183,16 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
 # Decrease screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 
-
 # Set default workspaces for certain programs
 for_window [class="Emacs"] move workspace "1:"
 for_window [class="Firefox"] move workspace "3:"
+for_window [class="Steam"] move workspace "4:"
 
+# Set background image
+exec --no-startup-id feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
+
+# Startup programms
+exec --no-startup-id emacs&
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
