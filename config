@@ -188,7 +188,7 @@ for_window [class="Emacs"] move workspace "1:"
 for_window [class="Firefox"] move workspace "3:"
 for_window [class="Steam"] move workspace "4:"
 
-# Set background image
+# set background image
 exec --no-startup-id feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
 
 # Startup programms
