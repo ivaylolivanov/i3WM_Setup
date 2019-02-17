@@ -68,6 +68,6 @@ tztime local {
 
 tztime utc {
     format = "<span color='#4262b7'> </span><span color='#e29930'>%time</span>"
-    format_time = "%e.%V.%Y"
-    timezone = "Etc/Europe/Sofia"
+    format_time = "%d.%m.%Y"
+    timezone = "Europe/Sofia"
 }
