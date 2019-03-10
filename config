@@ -80,8 +80,8 @@ bindsym $mod+a focus parent
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5"
+set $ws4 "4:"
+set $ws5 "5:"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -186,7 +186,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 # Set default workspaces for certain programs
 for_window [class="Emacs"] move workspace "1:"
 for_window [class="Firefox"] move workspace "3:"
-for_window [class="Steam"] move workspace "4:"
+for_window [class="Steam"] move workspace "5:"
 
 # set background image
 exec --no-startup-id feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
