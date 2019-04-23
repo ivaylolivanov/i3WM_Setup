@@ -189,10 +189,10 @@ for_window [class="Firefox"] move workspace "3:"
 for_window [class="Steam"] move workspace "5:"
 
 # set background image
-exec --no-startup-id feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
+exec --no-startup-id /usr/bin/feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
 
 # Startup programms
-exec --no-startup-id emacs&
+exec --no-startup-id /usr/bin/emacs&
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
