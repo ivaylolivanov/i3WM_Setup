@@ -205,7 +205,7 @@ exec --no-startup-id /usr/bin/nm-applet&
 # finds out, if available)
 bar {
         status_command i3status
-        font pango:inconsolata 11
+        font pango:inconsolata 11, FontAwesome 9
 	separator_symbol ""
 	strip_workspace_numbers yes
 
