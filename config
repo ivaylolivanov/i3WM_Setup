@@ -183,6 +183,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20
 # Decrease screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 
+# Screenshoot
+bindsym Print exec --no-startup-id xfce4-screenshooter
+
 # Set default workspaces for certain programs
 for_window [class="Emacs"] move workspace "1:"
 for_window [class="Firefox"] move workspace "3:"
