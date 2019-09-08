@@ -112,6 +112,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# move workspace between monitors
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+l move workspace to output right
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -193,6 +199,12 @@ for_window [class="Steam"] move workspace "5:"
 
 # set background image
 exec --no-startup-id /usr/bin/feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
+
+# If second monitor, connected via HDMI, put it as left output
+exec_always xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)' && xrandr --output "$(xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)')" --left-of "$(grep -Po '^[^\s]+(?=\sconnected\sprimary)')" --auto
+
+# Keybind to turn off connected HDMI
+bindsym $mod+m exec --no-startup-id xrandr --output "$(xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)')" --off
 
 # Startup programms
 exec --no-startup-id /usr/bin/emacs&
