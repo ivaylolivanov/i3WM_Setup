@@ -11,7 +11,7 @@ order += "wireless _first_"
 #order += "ethernet _first_"
 order += "disk /"
 order += "disk /home"
-order += "battery 1"
+order += "battery 0"
 order += "tztime local"
 order += "tztime utc"
 
@@ -47,7 +47,7 @@ disk "/home" {
     format = "<span color='#4262b7' font='7'>    </span><span color='#6eb5c0'> </span>%avail"
 }
 
-battery 1 {
+battery 0 {
     format = "%status %percentage <span color='#8f7a9d'>%remaining</span>"
     status_bat = "<span color='#FFB445'></span>"
     status_chr = "<span color='#4262b7'></span>"
