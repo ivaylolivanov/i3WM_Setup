@@ -164,7 +164,7 @@ bindsym $mod+r mode "resize"
 #+=====================+
 
 # Activate i3lock after 25 minutes of inactivity
-exec xautolock -time 25 -locker '/home/ivo/.config/i3/i3_lock_tty.sh' &
+exec xautolock -time 25 -locker "$HOME/.config/i3/i3_lock_tty.sh" &
 exec xautolock -time 30 -locker "systemctl suspend" &
 
 # Custom keybinds
@@ -172,7 +172,7 @@ exec xautolock -time 30 -locker "systemctl suspend" &
 exec --no-startup-id setxkbmap -model pc104 -layout us,bg,de -variant ,bas_phonetic, -option grp:alt_shift_toggle,grp_led:scroll
 
 # Screen lock
-bindsym Control+Mod1+l exec --no-startup-id /home/sleepyme/.config/i3/i3_lock_tty.sh
+bindsym Control+Mod1+l exec --no-startup-id "$HOME/.config/i3/i3_lock_tty.sh"
 
 # Pulse Audio controls
 # Increase Volume
@@ -197,7 +197,7 @@ for_window [class="Firefox"] move workspace "3:"
 for_window [class="Steam"] move workspace "5:"
 
 # set background image
-exec --no-startup-id /usr/bin/feh --bg-scale /home/sleepyme/Pictures/assassins_creed_iv_black_flag_assassin_pirate_edward_kenway_95415_1920x1080.jpg
+exec --no-startup-id /usr/bin/feh --bg-scale "$HOME/Pictures/tmnt_walpaper"
 
 # If second monitor, connected via HDMI, put it as left output
 exec_always xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)' && xrandr --output "$(xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)')" --left-of "$(grep -Po '^[^\s]+(?=\sconnected\sprimary)')" --auto
