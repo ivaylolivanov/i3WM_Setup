@@ -193,9 +193,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20
 bindsym Print exec --no-startup-id xfce4-screenshooter
 
 # Set default workspaces for certain programs
-for_window [class="Emacs"] move workspace "1:"
-for_window [class="Firefox"] move workspace "3:"
-for_window [class="Steam"] move workspace "5:"
+for_window [class="Emacs"] move workspace $ws1
+for_window [class="Firefox"] move workspace $ws3
+for_window [class="Steam"] move workspace $ws5
 
 # set background image
 exec --no-startup-id /usr/bin/feh --bg-scale "$HOME/Pictures/tmnt_walpaper"
@@ -209,8 +209,8 @@ bindsym $mod+m exec --no-startup-id xrandr --output "$(xrandr | grep -Po '^HDMI[
 # Startup programms
 exec --no-startup-id /usr/bin/emacs&
 exec --no-startup-id /usr/bin/firefox&
-exec --no-startup-id i3-msg 'workspace 2:; exec /usr/bin/xfce4-terminal'
-exec --no-startup-id i3-msg 'workspace 4:; exec /usr/bin/thunar'
+exec --no-startup-id i3-msg "workspace $ws2; exec /usr/bin/xfce4-terminal"
+exec --no-startup-id i3-msg "workspace $ws4; exec /usr/bin/thunar"
 exec --no-startup-id /usr/bin/nm-applet&
 
 # Start i3bar to display a workspace bar (plus the system information i3status
