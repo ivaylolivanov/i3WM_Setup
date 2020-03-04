@@ -17,6 +17,9 @@ font pango:awesome 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Start compton on boot
+exec_always compton -b
+
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 
