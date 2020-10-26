@@ -209,6 +209,9 @@ exec_always xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)' && xrandr --output "
 # Keybind to turn off connected HDMI
 bindsym $mod+m exec --no-startup-id xrandr --output "$(xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)')" --off
 
+# Keybind to enter presenter mode with HDMI
+bindsym $mod+p exec xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)' && xrandr --output "$(xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)')"  --auto --same-as "$(xrandr | grep -Po '^[^\s]+(?=\sconnected\sprimary)')"
+
 # Startup programms
 exec --no-startup-id /usr/bin/emacs&
 exec --no-startup-id /usr/bin/firefox&
