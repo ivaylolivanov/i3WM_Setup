@@ -201,7 +201,7 @@ for_window [class="Firefox"] move workspace $ws3
 for_window [class="Steam"] move workspace $ws5
 
 # set background image
-exec --no-startup-id /usr/bin/feh --bg-scale "$HOME/Pictures/tmnt_walpaper"
+exec --no-startup-id /usr/bin/feh --bg-scale "$HOME/Pictures/tmnt_wallpaper"
 
 # If second monitor, connected via HDMI, put it as left output
 exec_always xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)' && xrandr --output "$(xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)')"  --auto --left-of "$(xrandr | grep -Po '^[^\s]+(?=\sconnected\sprimary)')"
