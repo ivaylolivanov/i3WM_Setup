@@ -48,10 +48,10 @@ disk "/home" {
 
 battery all {
     format = "%status %percentage <span color='#8f7a9d'>%remaining</span>"
-    status_bat = "<span color='#FFB445'></span>"
-    status_chr = "<span color='#4262b7'></span>"
     status_full = ""
-    status_unk = "<span color='#8d0501'></span>"
+    status_bat = ""
+    status_chr = ""
+    status_unk = ""
     hide_seconds = true
     low_threshold = 25
     threshold_type = percentage
