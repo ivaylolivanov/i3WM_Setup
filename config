@@ -59,14 +59,12 @@ battery all {
 }
 
 tztime local {
-    format = "<span color='#c0b2b5'>%time</span>"
-    format_time = "%H:%M"
+    format = "<span color='#c0b2b5'>%H:%M</span>"
     separator = false
     separator_block_width = 5
 }
 
 tztime utc {
-    format = "<span color='#4262b7'> </span><span color='#e29930'>%time</span>"
-    format_time = "%d.%m.%Y"
+    format = "<span color='#4262b7'> </span><span color='#e29930'>%d.%m.%Y</span>"
     timezone = "Europe/Sofia"
 }
