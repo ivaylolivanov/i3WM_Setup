@@ -197,7 +197,7 @@ bindsym Print exec --no-startup-id xfce4-screenshooter
 
 # Set default workspaces for certain programs
 for_window [class="Emacs"] move workspace $ws1
-for_window [class="Firefox"] move workspace $ws3
+for_window [class="Brave-browser"] move workspace $ws3
 for_window [class="Steam"] move workspace $ws5
 
 # set background image
@@ -214,7 +214,7 @@ bindsym $mod+p exec xrandr | grep -Po '^HDMI[^\s]+?(?=\sconnected)' && xrandr --
 
 # Startup programms
 exec --no-startup-id /usr/bin/emacs&
-exec --no-startup-id /usr/bin/firefox&
+exec --no-startup-id /usr/bin/brave-browser&
 exec --no-startup-id i3-msg "workspace $ws2; exec /usr/bin/xfce4-terminal"
 exec --no-startup-id i3-msg "workspace $ws4; exec /usr/bin/thunar"
 exec --no-startup-id /usr/bin/nm-applet&
