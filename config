@@ -197,8 +197,12 @@ bindsym Print exec --no-startup-id xfce4-screenshooter
 
 # Set default workspaces for certain programs
 for_window [class="Emacs"] move workspace $ws1
+for_window [class="Xfce4-terminal"] move workspace $ws2
 for_window [class="Brave-browser"] move workspace $ws3
+for_window [class="Thunar"] move workspace $ws4
 for_window [class="Steam"] move workspace $ws5
+for_window [class="ViberPC"] move workspace $ws10
+for_window [class="thunderbird-default"] move workspace $ws10
 
 # set background image
 exec --no-startup-id /usr/bin/feh --bg-scale "$HOME/Pictures/tmnt_wallpaper"
